@@ -32,9 +32,8 @@ class HHSerializer(serializers.ModelSerializer):
             return {
                 'description': data['weather'][0]['description'],
                 'temperature': data['main']['temp'],
-                'humidity': data['main']['humidity'],
-                'wind_speed': data['wind']['speed']
-            }
+                'humidity': data['main']['humidity']
+                }
         else:
             return {}
         
